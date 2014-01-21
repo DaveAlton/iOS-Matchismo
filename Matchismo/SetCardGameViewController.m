@@ -7,6 +7,7 @@
 //
 
 #import "SetCardGameViewController.h"
+#import "SetCardDeck.h"
 
 @interface SetCardGameViewController ()
 
@@ -34,5 +35,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(Deck *)createDeck{
+    return [[SetCardDeck alloc] init];
+}
 @end
