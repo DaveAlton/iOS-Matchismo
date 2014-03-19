@@ -51,7 +51,7 @@
     return 3;
 }
 -(NSString *)contents{
-    return [NSString stringWithFormat:@"%@:%@:%@:%d", self.symbol, self.color, self.shading, self.number];
+    return [NSString stringWithFormat:@"%@:%@:%@:%ld", self.symbol, self.color, self.shading, self.number];
 }
 -(int)match:(NSArray *)otherCards{
     int score = 0;

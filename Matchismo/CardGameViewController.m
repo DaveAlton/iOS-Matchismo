@@ -59,13 +59,13 @@
 
 - (void)setSliderRange
 {
-    int maxValue = [self.flipHistory count] - 1;
+    NSUInteger maxValue = [self.flipHistory count] - 1;
     self.historySlider.maximumValue = maxValue;
     [self.historySlider setValue:maxValue animated:YES];
 }
 
 - (IBAction)changeSlider:(UISlider *)sender {
-    int sliderValue;
+    NSUInteger sliderValue;
     sliderValue = lroundf(self.historySlider.value);
     [self.historySlider setValue:sliderValue animated:NO];
     
@@ -80,7 +80,7 @@
 - (IBAction)touchCardButton:(UIButton *)sender
 {
     self.modeSelector.enabled = NO;
-    int cardIndex = [self.cardButtons indexOfObject:sender];
+    NSUInteger cardIndex = [self.cardButtons indexOfObject:sender];
     [self.game chooseCardAtIndex:cardIndex];
     [self updateUI];
 }
@@ -88,7 +88,7 @@
 - (void)updateUI
 {
     for (UIButton *cardButton in self.cardButtons) {
-        int cardIndex = [self.cardButtons indexOfObject:cardButton];
+        NSUInteger cardIndex = [self.cardButtons indexOfObject:cardButton];
         Card *card = [self.game cardAtIndex:cardIndex];
         [cardButton setTitle:[self titleForCard:card]
                     forState:UIControlStateNormal];
@@ -96,7 +96,7 @@
                               forState:UIControlStateNormal];
         cardButton.enabled = !card.matched;
     }
-    self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.game.score];
+    self.scoreLabel.text = [NSString stringWithFormat:@"Score: %ld", (long)self.game.score];
     
     if (self.game) {
         NSString *description = @"";
@@ -110,10 +110,10 @@
         }
         
         if (self.game.lastScore > 0) {
-            description = [NSString stringWithFormat:@"Matched %@ for %d points.", description, self.game.lastScore];
+            description = [NSString stringWithFormat:@"Matched %@ for %ld points.", description, (long)self.game.lastScore];
         } else if (self.game.lastScore < 0) {
 
-            description = [NSString stringWithFormat:@"%@ don’t match! %d point penalty!", description, -self.game.lastScore];
+            description = [NSString stringWithFormat:@"%@ don’t match! %ld point penalty!", description, -self.game.lastScore];
         }
         
         self.flipDescription.text = description;
