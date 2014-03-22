@@ -15,7 +15,6 @@
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *modeSelector;
-@property (weak, nonatomic) IBOutlet UILabel *flipDescription;
 @property (strong, nonatomic) NSMutableArray *flipHistory;
 @property (weak, nonatomic) IBOutlet UISlider *historySlider;
 
@@ -113,7 +112,7 @@
             description = [NSString stringWithFormat:@"Matched %@ for %ld points.", description, (long)self.game.lastScore];
         } else if (self.game.lastScore < 0) {
 
-            description = [NSString stringWithFormat:@"%@ don’t match! %ld point penalty!", description, -self.game.lastScore];
+            description = [NSString stringWithFormat:@"%@ don’t match! %ld point penalty!", description, -(long)self.game.lastScore];
         }
         
         self.flipDescription.text = description;

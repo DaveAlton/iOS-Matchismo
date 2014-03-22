@@ -21,6 +21,6 @@
 @property (nonatomic, readonly) NSInteger score;
 @property (nonatomic) NSUInteger maxMatchingCards;
 @property (nonatomic, readonly) NSArray *lastChosenCards;
-@property (nonatomic, readonly) NSInteger lastScore;
+@property (nonatomic, readonly) long lastScore;
 
 @end

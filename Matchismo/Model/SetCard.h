@@ -20,4 +20,5 @@
 + (NSArray *)validSymbols;
 + (NSArray *)validShading;
 + (NSUInteger)maxNumber;
++ (NSArray *)cardsFromText:(NSString *)text;
 @end

@@ -11,5 +11,5 @@
 
 @interface CardGameViewController : UIViewController
 -(void) updateUI;
-
+@property (weak, nonatomic) IBOutlet UILabel *flipDescription;
 @end
