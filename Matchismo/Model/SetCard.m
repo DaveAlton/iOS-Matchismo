@@ -102,7 +102,7 @@
     }
     NSArray *matches = [regex matchesInString:text
                                       options:0
-                                        range:NSMakeRange(0,1)];
+                                        range:NSMakeRange(0,[text length])];
     if(![matches count]){
         return nil;
     }

@@ -1096,6 +1096,18 @@
                         <outletCollection property="cardButtons" destination="9pK-Nr-vTu" id="Siy-jU-VeP"/>
                         <outletCollection property="cardButtons" destination="dGs-A1-2yH" id="Axx-AQ-z0n"/>
                         <outletCollection property="cardButtons" destination="RBa-XZ-E8J" id="pUz-dC-YkN"/>
+                        <outletCollection property="cardButtons" destination="xwv-vN-pDo" id="IU5-8h-XXT"/>
+                        <outletCollection property="cardButtons" destination="1kr-ny-GAW" id="9SM-W2-PnI"/>
+                        <outletCollection property="cardButtons" destination="Huh-ed-xaO" id="b3v-3B-OkM"/>
+                        <outletCollection property="cardButtons" destination="ao2-Bz-yi7" id="pik-eQ-dQ5"/>
+                        <outletCollection property="cardButtons" destination="XAm-k9-EBq" id="aVC-qy-qfm"/>
+                        <outletCollection property="cardButtons" destination="hAA-yU-mid" id="nue-E6-bsG"/>
+                        <outletCollection property="cardButtons" destination="BB9-iX-2h6" id="PdX-Ud-GQu"/>
+                        <outletCollection property="cardButtons" destination="32t-oC-6gM" id="iFy-SQ-TiJ"/>
+                        <outletCollection property="cardButtons" destination="zhC-gp-pta" id="W6V-0M-o8c"/>
+                        <outletCollection property="cardButtons" destination="uxg-fG-QDA" id="IUp-Sa-Ncb"/>
+                        <outletCollection property="cardButtons" destination="qXA-86-Axg" id="GnW-qA-HmL"/>
+                        <outletCollection property="cardButtons" destination="qUg-KY-sDN" id="8cR-CB-O1X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J9n-L0-Zso" sceneMemberID="firstResponder"/>
