@@ -15,7 +15,7 @@
     if(self){
         for (NSString *color in [SetCard validColors]){
             for (NSString *symbol in [SetCard validSymbols]){
-                for (NSString *shading in [SetCard validSymbols]){
+                for (NSString *shading in [SetCard validShading]){
                     for (NSUInteger number = 1; number <= [SetCard maxNumber]; number++){
                         SetCard *card = [[SetCard alloc] init];
                         card.color = color;
