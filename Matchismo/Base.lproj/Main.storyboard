@@ -927,7 +927,7 @@
         <scene sceneID="g5O-z0-u0I">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XQk-6b-TgA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Matchismo" id="9w4-jT-qbt"/>
+                    <tabBarItem key="tabBarItem" title="Matchismo" image="playingcards" id="9w4-jT-qbt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EFv-S8-dUa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -946,7 +946,7 @@
         <scene sceneID="q5R-KR-kNy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h4f-QW-1pM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Set" id="pwk-lK-rYe"/>
+                    <tabBarItem key="tabBarItem" title="Set" image="setcards" id="pwk-lK-rYe"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VZ5-uI-ztR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -964,6 +964,8 @@
     </scenes>
     <resources>
         <image name="cardback" width="64" height="96"/>
+        <image name="playingcards" width="30" height="30"/>
+        <image name="setcards" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
