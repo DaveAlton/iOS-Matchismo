@@ -128,6 +128,7 @@
     // Dispose of any resources that can be recreated.
 }
 -(Deck *)createDeck{
+    self.gameType = @"Set Cards";
     return [[SetCardDeck alloc] init];
     
     

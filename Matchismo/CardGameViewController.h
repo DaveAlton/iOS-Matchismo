@@ -13,4 +13,5 @@
 -(void) updateUI;
 @property (weak, nonatomic) IBOutlet UILabel *flipDescription;
 @property (strong, nonatomic) NSMutableArray *flipHistory;
+@property (strong, nonatomic) NSString *gameType;
 @end
