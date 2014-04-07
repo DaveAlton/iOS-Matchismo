@@ -22,11 +22,15 @@
 
 -(NSComparisonResult)compareScore:(GameResult *)result
 {
-    return [@(self.score) compare:@(result.score)];
+    return [@(result.score) compare:@(self.score)];
 }
 -(NSComparisonResult)compareDuration:(GameResult *)result
 {
-    return [@(self.duration) compare:@(result.duration)];
+    return [@(result.duration) compare:@(self.duration)];
+}
+-(NSComparisonResult)compareDate:(GameResult *)result
+{
+    return [result.end compare:self.end];
 }
 +(NSArray *)allGameResults
 {

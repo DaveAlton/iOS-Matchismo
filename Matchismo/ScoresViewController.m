@@ -21,6 +21,18 @@
     self.scores = [GameResult allGameResults];
     [self updateUI];
 }
+- (IBAction)sortByScore {
+    self.scores = [self.scores sortedArrayUsingSelector:@selector(compareScore:)];
+    [self updateUI];
+}
+- (IBAction)sortByDate {
+    self.scores = [self.scores sortedArrayUsingSelector:@selector(compareDate:)];
+    [self updateUI];
+}
+- (IBAction)sortByDuration {
+    self.scores = [self.scores sortedArrayUsingSelector:@selector(compareDuration:)];
+    [self updateUI];
+}
 -(void)updateUI
 {
     NSString *text = @"";
