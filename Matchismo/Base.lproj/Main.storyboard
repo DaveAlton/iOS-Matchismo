@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="LxD-XQ-Q53">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="LxD-XQ-Q53">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -18,11 +18,12 @@
                         <segue destination="XQk-6b-TgA" kind="relationship" relationship="viewControllers" id="8Ep-xP-hB2"/>
                         <segue destination="h4f-QW-1pM" kind="relationship" relationship="viewControllers" id="VgD-ZM-Yg4"/>
                         <segue destination="oke-mV-5s3" kind="relationship" relationship="viewControllers" id="EXB-LM-gIl"/>
+                        <segue destination="i1e-dk-FgW" kind="relationship" relationship="viewControllers" id="llb-Uq-1Tm"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tHB-dI-2UD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-355" y="-517"/>
+            <point key="canvasLocation" x="-378" y="-351"/>
         </scene>
         <!--Playing Card Game View Controller - Matchismo-->
         <scene sceneID="ufC-wZ-h7g">
@@ -930,6 +931,93 @@
             </objects>
             <point key="canvasLocation" x="181" y="-878"/>
         </scene>
+        <!--Settings View Controller - Settings-->
+        <scene sceneID="tdF-Th-8h4">
+            <objects>
+                <viewController id="i1e-dk-FgW" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Oca-6T-zNI"/>
+                        <viewControllerLayoutGuide type="bottom" id="M9d-uD-Bij"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I2g-xg-eZw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Match Bonus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Upg-XF-6zE">
+                                <rect key="frame" x="20" y="53" width="103" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mismatch Penalty" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIF-sA-CVD">
+                                <rect key="frame" x="20" y="156" width="137" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flip Cost" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="En6-HZ-hgp">
+                                <rect key="frame" x="20" y="262" width="69" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEX-U6-GVt">
+                                <rect key="frame" x="290" y="53" width="10" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Fy-kA-8a2">
+                                <rect key="frame" x="290" y="156" width="10" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvn-pZ-QQN">
+                                <rect key="frame" x="290" y="262" width="10" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="3dh-mT-sVL">
+                                <rect key="frame" x="18" y="87" width="284" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="matchBonusSliderChanged:" destination="i1e-dk-FgW" eventType="valueChanged" id="zUh-f7-QCo"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="j4o-ik-mKf">
+                                <rect key="frame" x="18" y="195" width="284" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="mismatchPenaltySliderChanged:" destination="i1e-dk-FgW" eventType="valueChanged" id="VeN-nm-Lfv"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="yjN-ck-NrA">
+                                <rect key="frame" x="18" y="306" width="284" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="flipCostSliderChanged:" destination="i1e-dk-FgW" eventType="valueChanged" id="4eA-G2-ihh"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="G9W-Wx-Dmy"/>
+                    <connections>
+                        <outlet property="flipCostLabel" destination="Zvn-pZ-QQN" id="6KJ-PQ-sg8"/>
+                        <outlet property="flipCostSlider" destination="yjN-ck-NrA" id="l4q-1k-HXR"/>
+                        <outlet property="matchBonusLabel" destination="SEX-U6-GVt" id="r1g-Lf-vZ0"/>
+                        <outlet property="matchBonusSlider" destination="3dh-mT-sVL" id="rVs-dZ-nzu"/>
+                        <outlet property="mismatchPenaltyLabel" destination="4Fy-kA-8a2" id="FLw-zB-mrb"/>
+                        <outlet property="mismatchPenaltySlider" destination="j4o-ik-mKf" id="1op-GJ-bT2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gg9-kc-Gvb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181" y="1067"/>
+        </scene>
         <!--Scores View Controller - Scores View Controller-->
         <scene sceneID="cfY-ir-3hF">
             <objects>
@@ -1018,6 +1106,7 @@
         <image name="playingcards" width="30" height="30"/>
         <image name="scores" width="30" height="30"/>
         <image name="setcards" width="30" height="30"/>
+        <image name="settings" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

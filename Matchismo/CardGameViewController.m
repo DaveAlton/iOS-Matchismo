@@ -10,6 +10,7 @@
 #import "CardMatchingGame.h"
 #import "HistoryViewController.h"
 #import "GameResult.h"
+#import "GameSettings.h"
 
 @interface CardGameViewController ()
 
@@ -19,10 +20,16 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *modeSelector;
 @property (weak, nonatomic) IBOutlet UISlider *historySlider;
 @property (strong, nonatomic) GameResult *gameResult;
+@property (strong, nonatomic) GameSettings *gameSettings;
 @end
 
 @implementation CardGameViewController
 
+-(GameSettings *)gameSettings
+{
+    if(!_gameSettings) _gameSettings = [[GameSettings alloc] init];
+    return _gameSettings;
+}
 -(GameResult *)gameResult
 {
     if(!_gameResult)
@@ -57,10 +64,19 @@
         _game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count]
                                                   usingDeck:[self createDeck]];
         [self changeModeSelector:self.modeSelector];
+        _game.matchBonus = self.gameSettings.matchBonus;
+        _game.mismatchPenalty = self.gameSettings.mismatchPenalty;
+        _game.flipCost = self.gameSettings.flipCost;
     }
     return _game;
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    _game.matchBonus = self.gameSettings.matchBonus;
+    _game.mismatchPenalty = self.gameSettings.mismatchPenalty;
+    _game.flipCost = self.gameSettings.flipCost;
+}
 - (Deck *)createDeck
 {
     return nil;
